@@ -62,8 +62,8 @@ class MapHistory(LevelGeometryIndexed):
         new_updates, new_affected = zip(*((update, affected) for i, update, affected in new_updates
                                           if i == 0 or affected.any()))
         self.updates = list(new_updates)
-        for i, affected in enumerate(new_affected):
-            self.data[affected] = i
+        # for i, affected in enumerate(new_affected):
+        #     self.data[affected] = i
 
     def write(self, *args, **kwargs):
         self.simplify()

@@ -2,7 +2,6 @@ import json
 import math
 from typing import Annotated, Union, Optional
 
-from celery import chain
 from django.core.cache import cache
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db import transaction
@@ -48,7 +47,7 @@ map_api_router = APIRouter(tags=["map"])
 def map_settings(request):
     initial_bounds = settings.INITIAL_BOUNDS
     if not initial_bounds:
-        initial_bounds = tuple(chain(*Source.max_bounds()))
+        initial_bounds = Source.max_bounds()
     else:
         initial_bounds = (tuple(settings.INITIAL_BOUNDS)[:2], tuple(settings.INITIAL_BOUNDS)[2:])
 

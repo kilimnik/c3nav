@@ -23,9 +23,9 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt_$TARGETARCH --mount=type=tmp
     # renovate: srcname=python-pip
     python3-pip=24.0+dfsg-1ubuntu1.1 \
     # renovate: srcname=postgresql-16
-    libpq5=16.8-0ubuntu0.24.04.1 \
+    libpq5 \
     # renovate: srcname=postgresql-16
-    postgresql-client-16=16.8-0ubuntu0.24.04.1 \
+    postgresql-client-16 \
     curl=8.5.0-2ubuntu10.6 \
     # renovate: srcname=pcre3
     libpcre3=2:8.39-15build1 \
@@ -39,7 +39,7 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt_$TARGETARCH --mount=type=tmp
     # renovate: srcname=libmemcached
     libmemcached11t64=1.1.4-1.1build3 \
     gettext \
-    tzdata=2025b-0ubuntu0.24.04 \
+    tzdata \
     ca-certificates=20240203 \
     # renovate: srcname=libzstd
     zstd=1.5.5+dfsg2-2build1.1
@@ -54,7 +54,7 @@ RUN --mount=type=cache,target=/var/cache/apt,id=apt_$TARGETARCH --mount=type=tmp
     python3.12-dev=3.12.3-1ubuntu0.5 \
     libpcre3-dev=2:8.39-15build1 \
     # renovate: srcname=postgresql-16
-    libpq-dev=16.8-0ubuntu0.24.04.1 \
+    libpq-dev \
     # renovate: srcname=cairo
     libcairo2-dev=1.18.0-3build1 \
     libgirepository1.0-dev=1.80.1-1 \
